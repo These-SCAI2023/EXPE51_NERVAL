@@ -1,0 +1,50 @@
+______________________________________________________
+____________CARRAUD_________________________
+______________________________________________________
+
+GOLD
+
+python evaluate.py -a GOLD_IOB_ELTeC/CARRAUD/resultat_Adjudication_CARRAUD_petite-Jeanne_REF_spaCy3.7.2-lg.iob.aia.iob -p REF_small-ELTeC-fra_IOB/CARRAUD_petite-Jeanne/CARRAUD_petite-Jeanne_REF/NER/CARRAUD_petite-Jeanne_REF.txt_spacy-lg-3.7.5-tabO.bio
+
+ACC-MAJ
+
+python evaluate.py -a Acc-MAJ_IOB/CARRAUD/resultat_Adjudication_CARRAUD_petite-Jeanne_REF_spaCy3.7.2-lg.iob.aia_6000.iob -p REF_small-ELTeC-fra_IOB/CARRAUD_petite-Jeanne/CARRAUD_petite-Jeanne_REF/NER/CARRAUD_petite-Jeanne_REF.txt_spacy-lg-3.7.5-tabO_6000.bio
+
+______________________________________________________
+____________DAUDET_________________________
+______________________________________________________
+
+GOLD
+
+python evaluate.py -a GOLD_IOB_ELTeC/DAUDET/resultat_Adjudication_DAUDET_petit-chose_REF_spaCy3.7.2-lg.iob.aia_6000.iob -p REF_small-ELTeC-fra_IOB/DAUDET_petit-chose/DAUDET_petit-chose_REF/NER/DAUDET_petit-chose_REF.txt_spacy-lg-3.7.5-tabO_6000.bio
+
+ACC-MAJ
+
+python evaluate.py -a Acc-MAJ_IOB/DAUDET/resultat_Adjudication_DAUDET_petit-chose_REF_spaCy3.7.2-lg.iob.aia.iob -p REF_small-ELTeC-fra_IOB/DAUDET_petit-chose/DAUDET_petit-chose_REF/NER/DAUDET_petit-chose_REF.txt_spacy-lg-3.7.5-tabO_6000.bio
+
+______________________________________________________
+____________DAUDET + CARRAUD_________________________
+______________________________________________________
+GOLD
+
+python evaluate.py -a GOLD_IOB_ELTeC/resultat_Adjudication_DAUDET-carraud_REF_spaCy3.7.2-lg.iob.aia_12000.iob -p REF_small-ELTeC-fra_IOB/DAUDET-CARRAUD_REF.txt_spacy-lg-3.7.5-tabO_12000.bio
+
+ACC MAJ
+
+python evaluate.py -a Acc-MAJ_IOB/resultat_Adjudication_DAUDET-carraud_REF_spaCy3.7.2-lg.iob.aia_12000.iob -p REF_small-ELTeC-fra_IOB/DAUDET-CARRAUD_REF.txt_spacy-lg-3.7.5-tabO_12000.bio
+
+
+______________________________________________________
+____________DAUDET + CARRAUD + MAUPASSANT_________________________
+______________________________________________________
+
+GOLD
+python evaluate_stockoutput.py -a GOLD_IOB_ELTeC/GOLD_Adjudication_DAUDET-CARRAUD-MAUPASSANT_REF_spaCy3.7.2-lg.iob.aia_12000.iob -p REF_small-ELTeC-fra_IOB/DAUDET-CARRAUD-MAUPASSANT_REF.txt_spacy-lg-3.7.5-tabO_12000.bio
+
+
+ACC MAJ
+
+python evaluate_stockoutput.py -a Acc-MAJ_IOB/Acc-MAJ_Adjudication_DAUDET-CARRAUD-MAUPASSANT_REF_spaCy3.7.2-lg.iob.aia_12000.iob -p REF_small-ELTeC-fra_IOB/DAUDET-CARRAUD-MAUPASSANT_REF.txt_spacy-lg-3.7.5-tabO_12000.bio
+
+
+python evaluate_stockoutput.py -a EXPE49_NERVAL_ACC-MAJ/ACC-MAJ_DAUDET_MAUPASSANT_une-vie_PP.txt.csv._10000bio -p EXPE49_NERVAL_ACC-MAJ/DAUDET-MAUPASSANT_petit-chose_REF.txt_spacy-lg-3.7.5-tabO_10000.bio

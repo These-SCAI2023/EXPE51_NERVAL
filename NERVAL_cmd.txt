@@ -1,0 +1,51 @@
+https://gitlab.com/teklia/ner/nerval/-/tree/master/
+
+python evaluate.py -a demo/bio_folder/demo_annot.bio -p demo/bio_folder/demo_predict.bio
+
+exemple : 
+
+python evaluate.py -a BIO_OCR_OCR-jam_spaCy-lg3.3.1/ADAM/ADAM_krakenbase/ADAM_Mon-village_PPtxt_lg-ref_spacy.bio -p BIO_OCR_OCR-jam_spaCy-lg3.3.1/ADAM/ADAM_krakenbase/ADAM_Mon-village_Kraken-basetxt_lg_spacy.bio
+
+predict = OCR
+annot = Réf.
+
+
+python evaluate.py -a DATA_ELTeC_spaCy3.5.1/DATA_ELTeC-fra_spaCy3.5.1/DAUDET/DAUDET_REF/NER/DAUDET_petit-chose_PP.txt_spacy-lg-3.5.1_chunk_all.bio -p DATA_ELTeC_spaCy3.5.1/DATA_ELTeC-fra_spaCy3.5.1/DAUDET/DAUDET_OCR/DAUDET_kraken/NER/DAUDET_petit-chose_Kraken-base.txt_spacy-lg-3.5.1_chunk_all.bio
+
+
+DAUDET
+
+python evaluate.py -a DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_REF/NER/DAUDET_petit-chose_PP.txt_spacy-lg-3.5.1.bio -p DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_OCR/DAUDET_kraken/NER/DAUDET_petit-chose_Kraken-base.txt_spacy-lg-3.5.1.bio
+
+python evaluate.py -a DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_REF/NER/DAUDET_petit-chose_PP.txt_spacy-lg-3.5.1.bio -p DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_OCR/DAUDET_kraken/NER/DAUDET_petit-chose_Kraken-base.txt_spacy-lg-3.5.1_TEST.bio
+
+ET_petit-chose_PP.txt_spacy-lg-3.5.1.bio -p DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_OCR/DAUDET_kraken/NER/DAUDET_petit-chose_Kraken-base.txt_spacy-lg-3.5.1_TEST.bio
+| tag  | predicted | matched | Precision | Recall | F1    | Support |
+|------|-----------|---------|-----------|--------|-------|---------|
+| PER  | 2208      | 1168    | 0.529     | 0.718  | 0.609 | 1626    |
+| ORG  | 248       | 31      | 0.125     | 0.341  | 0.183 | 91      |
+| MISC | 809       | 184     | 0.227     | 0.264  | 0.244 | 697     |
+| LOC  | 1122      | 567     | 0.505     | 0.762  | 0.608 | 744     |
+| All  | 4387      | 1950    | 0.444     | 0.617  | 0.517 | 3158    |
+
+
+python evaluate.py -a DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_REF/NER/DAUDET_petit-chose_PP.txt_spacy-lg-3.5.1.bio -p DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_OCR/DAUDET_kraken-jspll-ELTeC/NER/DAUDET_petit-chose_kraken-jspll-ELTeC.txt_spacy-lg-3.5.1.bio
+
+| tag  | predicted | matched | Precision | Recall | F1    | Support |
+|------|-----------|---------|-----------|--------|-------|---------|
+| PER  | 2191      | 1163    | 0.531     | 0.715  | 0.609 | 1626    |
+| ORG  | 225       | 29      | 0.129     | 0.319  | 0.184 | 91      |
+| MISC | 861       | 180     | 0.209     | 0.258  | 0.231 | 697     |
+| LOC  | 1055      | 548     | 0.519     | 0.737  | 0.609 | 744     |
+| All  | 4332      | 1920    | 0.443     | 0.608  | 0.513 | 3158    |
+
+
+python evaluate.py -a DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_REF/NER/DAUDET_petit-chose_PP.txt_spacy-lg-3.5.1.bio -p DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_OCR/DAUDET_kraken-jspll-pretrain/NER/DAUDET_petit-chose_kraken-jspll-pretrain.txt_spacy-lg-3.5.1.bio
+
+python evaluate.py -a DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_REF/NER/DAUDET_petit-chose_PP.txt_spacy-lg-3.5.1.bio -p DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_OCR/DAUDET_TesseractFra-PNG/NER/DAUDET_petit-chose_TesseractFra-PNG.txt_spacy-lg-3.5.1.bio
+
+python evaluate.py -a DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_REF/NER/DAUDET_petit-chose_PP.txt_spacy-lg-3.5.1.bio -p DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_OCR/DAUDET_TesseractFra-PNG-jspll-ELTeC/NER/DAUDET_petit-chose_TesseractFra-PNG-jspll-ELTeC.txt_spacy-lg-3.5.1
+
+python evaluate.py -a DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_REF/NER/DAUDET_petit-chose_PP.txt_spacy-lg-3.5.1.bio -p DATA_ELTeC_BIO/DATA_ELTeC-fra_BIO/DAUDET/DAUDET_OCR/DAUDET_TesseractFra-PNG-jspll-pretrain/NER/DAUDET_petit-chose_TesseractFra-PNG-jspll-pretrain.txt_spacy-lg-3.5.1.bio
+
+python evaluate.py -a DATA_ELTeC_BIO/DATA_ELTeC-eng_BIO/THACKERAY/THACKERAY_REF/NER/THACKERAY_Vanity-fair_REF.txt_spacy-lg-3.5.1.bio -p DATA_ELTeC_BIO/DATA_ELTeC-eng_BIO/THACKERAY/THACKERAY_OCR/THACKERAY_Tesseract-PNG/NER/THACKERAY_Vanity-fair_Tesseract-PNG.txt_spacy-lg-3.5.1
